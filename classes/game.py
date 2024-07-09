@@ -1,3 +1,6 @@
+from classes.character import Character
+from classes.mob import Monster
+
 class Game:
   def lutar(self):
       print("lutei")

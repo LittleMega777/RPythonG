@@ -9,3 +9,7 @@ class Character:
   
   def show_stats(self):
     print(f"Name: {self.name} // HP: {self.life}/{self.max_life} // Damage: {self.damage} // Level: {self.xp} // Moedas: {self.coins}")
+  
+  def character_attack(self, target):
+    target.life -= self.damage
+    
