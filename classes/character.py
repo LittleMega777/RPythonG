@@ -5,6 +5,7 @@ class Character:
     self.life = self.max_life
     self.damage = 1
     self.xp = 0
+    self.stamina = 3
     self.coins = 0
   
   def show_stats(self):

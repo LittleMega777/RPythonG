@@ -12,3 +12,6 @@ node_modules
 
 # Ignore SASS config files
 .sass-cache
+
+# __pycache__ ignore
+__pycache__
