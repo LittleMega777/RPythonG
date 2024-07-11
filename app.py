@@ -3,9 +3,10 @@ from classes.mob import Monster
 from classes.game import Game
 import os
 
-game = Game()
 character = Character()
 mob = Monster("Aranho")
+
+game = Game(character, mob)
 
 # TEM QUE CRIAR OPCOES
 # LUTAR (GERA MOB ALEATORIO INICIA A LUTA)
