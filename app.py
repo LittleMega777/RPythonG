@@ -13,9 +13,7 @@ mob = Monster("Aranho")
 
 while True:
     character.show_stats()
-    mob.monster_attack(character)
-    character.show_stats()
-    destiny = str(input("Escolha seu destino: \n [1] Lutar \n [2] Descansar\n"))
+    destiny = str(input("Escolha seu destino: \n [1] Lutar \n [2] Descansar\n")) # colocar numa def mais inteligente
     game.destiny(destiny)
 
 

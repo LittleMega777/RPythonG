@@ -4,13 +4,14 @@ from classes.mob import Monster
 class Game:
   def __init__(self):
       self.possibility = {
-          "1":self.lutar,
-          "2":self.descansar
+          "1":self.battle,
+          "2":self.sleep
       }
-  def lutar(self):
-      print("lutei")
+  def battle(self):
+      ...
+      
 
-  def descansar(self):
+  def sleep(self):
       print("descansei")
 
   def destiny(self, command):
