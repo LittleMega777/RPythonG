@@ -2,6 +2,11 @@ from classes.character import Character
 from classes.mob import Monster
 
 class Game:
+  def __init__(self):
+      self.possibility = {
+          "1":self.lutar,
+          "2":self.descansar
+      }
   def lutar(self):
       print("lutei")
 
@@ -9,8 +14,4 @@ class Game:
       print("descansei")
 
   def destiny(self, command):
-      possibility = {
-          "1":self.lutar,
-          "2":self.descansar
-      }
-      return possibility[command]()
+      return self.possibility[command]()

@@ -15,9 +15,8 @@ while True:
     character.show_stats()
     mob.monster_attack(character)
     character.show_stats()
-    break
-    # destiny = str(input("Escolha seu destino: \n [1] Lutar \n [2] Descansar\n"))
-    # game.destiny(destiny)
+    destiny = str(input("Escolha seu destino: \n [1] Lutar \n [2] Descansar\n"))
+    game.destiny(destiny)
 
 
 
