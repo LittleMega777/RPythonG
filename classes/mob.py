@@ -1,4 +1,5 @@
 class Monster():
+  
   def __init__(self, name):
     self.name = name
     self.max_life = 10

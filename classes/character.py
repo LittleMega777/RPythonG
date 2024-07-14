@@ -1,4 +1,5 @@
 class Character:
+  
   def __init__(self):
     self.name = "Guerreiro"
     self.max_life = 10
