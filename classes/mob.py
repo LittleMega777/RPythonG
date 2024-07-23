@@ -7,6 +7,7 @@ class Monster():
     self.damage = 1
     self.max_stamina = 6
     self.stamina = 0
+    self.stamina_regen = 1
 
   def show_monster_stats(self):
     print(f"Name: {self.name} // HP: {self.life}/{self.max_life} // Damage: {self.damage}")

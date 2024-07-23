@@ -10,6 +10,7 @@ class Character:
     self.level = 1
     self.max_stamina = 3
     self.stamina = 0
+    self.stamina_regen = 1
     self.coins = 0
   
   def show_stats(self):
