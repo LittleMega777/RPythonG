@@ -19,10 +19,4 @@ while True:
 
 
 
-print("game over")
-# só para dale
-# os.system('clear')
-
-
-
 
