@@ -4,7 +4,7 @@ from classes.game import Game
 import os
 
 character = Character()
-mob = Monster("Aranho")
+mob = Monster("Aranho") # deschumbar com dicionario de monstros
 
 game = Game(character, mob)
 

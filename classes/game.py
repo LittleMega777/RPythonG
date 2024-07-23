@@ -11,6 +11,7 @@ class Game:
             "1":self.battle,
             "2":self.sleep
         }
+
     def battle(self):
         while self.character.life > 0 and self.monster.life > 0:
             time.sleep(1)
@@ -27,7 +28,7 @@ class Game:
                 self.character.stamina = 0
         print("fim da luta")
             
-    def sleep(self):
+    def sleep(self): # ta para chegar ai
         print("descansei")
 
     def destiny(self, command):
