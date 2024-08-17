@@ -2,9 +2,13 @@ from classes.character import Character
 from classes.mob import Monster
 from classes.game import Game
 import os
+from random import randint
 
+
+mobs_possiveis = ["Aranha", "Esqueleto", "Pato"] # arrumar
 character = Character()
-mob = Monster("Aranho") # deschumbar com dicionario de monstros
+mob = Monster(mobs_possiveis[randint(0, 2)]) # deschumbar com dicionario de monstros
+# randint = random + int = inteiro
 
 game = Game(character, mob)
 

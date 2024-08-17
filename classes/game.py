@@ -11,6 +11,9 @@ class Game:
             "1":self.battle,
             "2":self.sleep
         }
+    
+    def destiny(self, command):
+        return self.possibility[command]()
 
     def battle(self):
         while self.character.life > 0 and self.monster.life > 0:
@@ -30,6 +33,3 @@ class Game:
             
     def sleep(self): # ta para chegar ai
         print("descansei")
-
-    def destiny(self, command):
-        return self.possibility[command]()
