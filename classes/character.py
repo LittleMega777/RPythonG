@@ -14,8 +14,11 @@ class Character:
     self.coins = 0
   
   def show_stats(self):
-    print(f"Name: {self.name} // HP: {self.life}/{self.max_life} // Damage: {self.damage} // Level: {self.level}  XP: {self.xp}/{self.max_xp} // Moedas: {self.coins}")
+    print(f"Name: {self.name} // HP: {self.life}/{self.max_life} // Damage: {self.damage} // Level: {self.level} // XP: {self.xp}/{self.max_xp} // Moedas: {self.coins}")
   
+  def show_battle_stats(self):
+    print(f"Name: {self.name} // HP: {self.life}/{self.max_life} // Damage: {self.damage}")
+
   def character_attack(self, target):
     target.life -= self.damage
     
