@@ -12,14 +12,14 @@ class Game:
             "2":self.sleep
         }
 
+    def destiny(self, command):
+        return self.possibility[command]()
+    
     def print_stamina_bar(self, current_stamina, max_stamina):
         bar_length = 30 # Length of the bar in characters
         filled_length = int(bar_length * current_stamina // max_stamina)
         bar = '█' * filled_length + '-' * (bar_length - filled_length)
         print(f'|{bar}| {current_stamina}/{max_stamina}')
-    
-    def destiny(self, command):
-        return self.possibility[command]()
 
     def battle(self):
         self.character.show_battle_stats()
@@ -49,5 +49,5 @@ class Game:
                 time.sleep(1)
         print("========================= fim da luta ============================")
             
-    def sleep(self): # ta para chegar ai
+    def rest(self): # ta para chegar ai
         print("descansei")
