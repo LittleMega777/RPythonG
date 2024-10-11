@@ -9,7 +9,7 @@ class Game:
         self.monster = monster
         self.possibility = {
             "1":self.battle,
-            "2":self.sleep
+            "2":self.rest
         }
 
     def destiny(self, command):
@@ -25,7 +25,7 @@ class Game:
         self.character.show_battle_stats()
         self.monster.show_battle_stats()
 
-        while self.character.life > 0 and self.monster.life > 0:
+        while self.character.alive and self.monster.alive:
             time.sleep(1)
             self.character.stamina += 1
             self.monster.stamina += 1
@@ -40,6 +40,7 @@ class Game:
                 self.monster.stamina = 0
                 self.character.show_battle_stats()
                 time.sleep(1)
+                self.character.check_if_alive()
                 
             if self.character.stamina >= self.character.max_stamina:
                 print(f"{self.character.name} deu {self.character.damage} de dano")
@@ -47,6 +48,7 @@ class Game:
                 self.character.stamina = 0
                 self.monster.show_battle_stats()
                 time.sleep(1)
+                self.monster.check_if_alive()
         print("========================= fim da luta ============================")
             
     def rest(self): # ta para chegar ai
