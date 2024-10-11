@@ -39,14 +39,15 @@ class Game:
                 self.monster.monster_attack(self.character)
                 self.monster.stamina = 0
                 self.character.show_battle_stats()
+                time.sleep(1)
                 
             if self.character.stamina >= self.character.max_stamina:
                 print(f"{self.character.name} deu {self.character.damage} de dano")
                 self.character.character_attack(self.monster)
                 self.character.stamina = 0
                 self.monster.show_battle_stats()
-
-        print("fim da luta")
+                time.sleep(1)
+        print("========================= fim da luta ============================")
             
     def sleep(self): # ta para chegar ai
         print("descansei")
