@@ -12,17 +12,16 @@ class Character:
     self.stamina = 0
     self.stamina_regen = 1
     self.coins = 0
-    self.alive = True # vai receber funcao
+  
+  @property
+  def alive(self):
+    return self.life >= 0
   
   def show_stats(self):
     print(f"Name: {self.name} // HP: {self.life}/{self.max_life} // Damage: {self.damage} // Level: {self.level} // XP: {self.xp}/{self.max_xp} // Moedas: {self.coins}")
   
   def show_battle_stats(self):
     print(f"Name: {self.name} // HP: {self.life}/{self.max_life} // Damage: {self.damage}")
-
-  def check_if_alive(self):
-    if self.life < 0:
-      self.alive = False
 
   def character_attack(self, target):
     target.life -= self.damage
