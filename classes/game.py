@@ -8,8 +8,8 @@ class Game:
         self.character = character
         self.monster = monster
         self.possibility = {
-            "1":self.battle,
-            "2":self.rest
+            "1": self.battle,
+            "2": self.rest
         }
 
     def destiny(self, command):
@@ -49,5 +49,5 @@ class Game:
                 time.sleep(1)
         print("========================= fim da luta ============================")
             
-    def rest(self): # ta para chegar ai
+    def rest(self):
         print("descansei")
