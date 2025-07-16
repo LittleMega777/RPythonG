@@ -12,9 +12,6 @@ mob = Monster(mobs_possiveis[randint(0, 2)]) # deschumbar com dicionario de mons
 
 game = Game(character, mob)
 
-# TEM QUE CRIAR OPCOES
-# LUTAR (GERA MOB ALEATORIO INICIA A LUTA)
-# DESCANSO(CUSTA MOEDAS E RECUPERA VIDA)
 
 while True:
     character.show_stats()
