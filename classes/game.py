@@ -4,9 +4,8 @@ import time
 
 class Game:
     
-    def __init__(self, character, monster):
+    def __init__(self, character):
         self.character = character
-        self.monster = monster
         self.possibility = {
             "1": self.battle,
             "2": self.rest
@@ -16,7 +15,7 @@ class Game:
         return self.possibility[command]()
     
     def print_stamina_bar(self, current_stamina, max_stamina):
-        bar_length = 30 # Length of the bar in characters
+        bar_length = 30
         filled_length = int(bar_length * current_stamina // max_stamina)
         bar = '█' * filled_length + '-' * (bar_length - filled_length)
         print(f'|{bar}| {current_stamina}/{max_stamina}')
@@ -34,7 +33,7 @@ class Game:
             print(f"Monster Stamina:")
             self.print_stamina_bar(self.monster.stamina, self.monster.max_stamina)
             
-            if self.monster.stamina >= self.monster.max_stamina:
+            if self.monster.stamina >= self.monster.max_stamina: # teoricamente devia ser feito pelo propio objeto
                 print(f"{self.monster.name} deu {self.monster.damage} de dano")
                 self.monster.monster_attack(self.character)
                 self.monster.stamina = 0
@@ -50,4 +49,5 @@ class Game:
         print("========================= fim da luta ============================")
             
     def rest(self):
+
         print("descansei")

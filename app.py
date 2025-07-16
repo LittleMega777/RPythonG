@@ -10,8 +10,7 @@ character = Character()
 mob = Monster(mobs_possiveis[randint(0, 2)]) # deschumbar com dicionario de monstros
 # randint = random + int = inteiro
 
-game = Game(character, mob)
-
+game = Game(character, mob) # tirar a instancia dos mobs daqui
 
 while True:
     character.show_stats()
